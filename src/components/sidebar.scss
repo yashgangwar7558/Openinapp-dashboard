@@ -1,0 +1,57 @@
+// width 275px from laylot
+@import "../Index.scss";
+.sidebarContainer {
+	padding: 15px 30px;
+	@include mobile {
+		// padding: 0;
+	}
+	// border: 1px red solid;
+	.sidebar {
+		// border: 1px rgb(133, 4, 153) solid;
+		color: white;
+		background-color: #4285f4;
+		& > :nth-child(1) {
+			// header part
+			display: flex;
+			align-items: center;
+			justify-content: space-between;
+			// border: 1px red solid;
+			& > :last-child {
+				// X icon
+				opacity: 0.5;
+				cursor: pointer;
+				display: none;
+				@include mobile {
+					display: block;
+				}
+				@include tablet {
+					display: block;
+				}
+			}
+		}
+		& > :nth-child(2) {
+			// lists
+			display: flex;
+			align-items: center;
+			justify-content: center;
+			flex-direction: column;
+			gap: 30px;
+			cursor: pointer;
+			transition: transform 0.2s;
+			// border: 1px red solid;
+			div {
+				// border: 1px red solid;
+				width: 100%;
+				display: flex;
+				align-items: center;
+				justify-content: start;
+				gap: 20px;
+				transition: transform 0.2s;
+			}
+			div:hover {
+				transform: scale(1.1);
+				font-weight: bolder;
+			}
+		}
+	}
+}
