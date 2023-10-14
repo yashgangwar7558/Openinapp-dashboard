@@ -31,8 +31,7 @@ const App = () => {
 					path="/"
 					element={
 						<Protectedelement>
-							<Layout>
-							</Layout>
+							<Layout/>
 						</Protectedelement>
 					}
 				>
